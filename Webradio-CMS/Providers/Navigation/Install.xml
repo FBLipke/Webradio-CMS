@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Namiono>
+	<Install Provider="Navigation">
+		<Entries>
+			<Entry Name="Startseite" Locked="0" Active="1" Moderator="0" Service="0" Frame="[#Provider#]" Output="Startseite" Level="0" Url="direct;/" />
+		</Entries>
+	</Install>
+</Namiono>

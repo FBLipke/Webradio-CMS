@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Namiono>
+	<Install Provider="News">
+		<Entries>
+			<Entry Name="Installation abgeschlossen" Locked="0" Moderator="0" Service="0" Frame="[#Provider#]" Output="Wenn Sie diese News sehen, dann wurde die erstInstallation erfolgreich abgeschlossen.[[NL]]
+			Ein Administrator-Konto wurde erstellt, welches für die Konfiguration der Instanz verwendet werden kann.[[NL]]Beachten Sie auch, dass das Password geändert werden muss!" Level="0" Url="" Author="" />
+			<Entry Name="Willkommen bei [#SITE_TITLE#]" Locked="0" Moderator="0" Service="0" Frame="[#Provider#]" Output="Willkommen bei [#SITE_TITLE#], dein Webradio im WWW." Level="0" Url="" Author="User:admin" />
+		</Entries>
+		<Groups>
+			<Group Name="News" Level="254" />
+		</Groups>
+		<Users>
+			<User Name="News-Nico" Service="1" Locked ="1" Moderator="0" Output="-" Password="-" Group="News" />
+			<User Name="Admin" Service="0" Id="22d1443e-a9c3-4c65-bdc0-fc5c1de13178" Locked ="0" Moderator="1" Output="-" Level ="254" Password="123456" Group="System" />
+		</Users>
+	</Install>
+</Namiono>

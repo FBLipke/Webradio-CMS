@@ -1,0 +1,3 @@
+﻿<header>
+	[[content-header]]
+</header>
