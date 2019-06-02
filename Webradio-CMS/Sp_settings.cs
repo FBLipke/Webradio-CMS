@@ -1,6 +1,6 @@
 ﻿using System;
 
-public sealed partial class Sendeplan<T>
+public sealed class Sendeplan<T>
 {
     public class Sp_settings : IDisposable
 	{

@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
-using System.Xml;
 
 namespace Namiono
 {
@@ -92,6 +91,15 @@ namespace Namiono
 			return (Y)Convert.ChangeType(value, typeof(Y));
 		}
 
+		/// <summary>
+		/// Sets or appends the Value for a Property.
+		/// </summary>
+		/// <typeparam name="S"></typeparam>
+		/// <param name="obj"></param>
+		/// <param name="name"></param>
+		/// <param name="value"></param>
+		/// <param name="append"></param>
+		/// <param name="delimeter"></param>
 		public static void SetPropertyValue<S>(object obj, string name, S value, bool append = false, string delimeter = ";")
 		{
 			var prop = obj.GetType().GetProperties()
@@ -113,12 +121,27 @@ namespace Namiono
 				prop.SetValue(obj, value);
 		}
 
+		/// <summary>
+		/// Invokes a Method
+		/// </summary>
+		/// <typeparam name="S"></typeparam>
+		/// <param name="obj"></param>
+		/// <param name="name"></param>
+		/// <param name="parameters"></param>
 		public static void InvokeMethod<S>(S obj, string name, object[] parameters = null)
 		{
 			var method = obj.GetType().GetMethod(name);
 			method?.Invoke(typeof(S), parameters);
 		}
 
+		/// <summary>
+		/// Subscriptes a Event on a Member.
+		/// </summary>
+		/// <typeparam name="S"></typeparam>
+		/// <param name="obj"></param>
+		/// <param name="origin"></param>
+		/// <param name="name"></param>
+		/// <param name="method"></param>
 		public static void SubscribeEvent<S>(S obj, object origin, string name, string method)
 		{
 			var evt = obj.GetType().GetEvent(name);
